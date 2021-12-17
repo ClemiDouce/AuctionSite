@@ -7,9 +7,13 @@ from auction.models import Auction
 class Comment(models.Model):
     """"""
     content = models.TextField(max_length=255, blank=False, null=False)
-    user_id = models.ForeignKey(to=CustomUser, on_delete=models.CASCADE)
-    auction_id = models.ForeignKey(to=Auction, on_delete=models.CASCADE)
+    author = models.ForeignKey(to=CustomUser, on_delete=models.CASCADE)
+    auction = models.ForeignKey(to=Auction, on_delete=models.CASCADE)
     
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
+    
+    def __str__(self):
+        """"""
+        return f"{self.author.usename} - {self.content[:25]}"
