@@ -1,0 +1,22 @@
+
+version: 2.1
+
+orbs:
+  python: circleci/python@1.2
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Run tests
+          command: python manage.py test -v 1
+
+workflows:
+  base-workflow:
+    jobs:
+      - build-and-test
