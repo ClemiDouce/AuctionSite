@@ -16,4 +16,4 @@ class Comment(models.Model):
     
     def __str__(self):
         """"""
-        return f"{self.author.usename} - {self.content[:25]}"
+        return f"{self.author.username} - {self.content[:25]}"
