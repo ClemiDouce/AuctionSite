@@ -8,11 +8,7 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/python:3.9
-      - image: cimg/postgres:14.0
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: auctiontest
+      - image: cimg/postgres:14.0.0
     steps:
       - checkout
       - python/install-packages:
