@@ -1,0 +1,48 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: "Montserrat Medium", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+
+  .navlink {
+    li {
+      display: inline-block;
+
+      &:hover {
+        background-color: crimson;
+      }
+
+      a {
+        display: block;
+        transition: all 0.3s ease 0s;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        padding: 14px 16px;
+        text-align: center;
+
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .logo {
+    padding: 10px 10px;
+    max-width: 10%;
+  }
+}
+
+.content {
+  background-color: grey;
+}

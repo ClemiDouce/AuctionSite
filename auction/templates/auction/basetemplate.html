@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href={% static "auction/css/index.css" %}>
+</head>
+<body>
+	<header>
+		<img class="logo" src="{% static "auction/very_smoll_logo.png" %}" class="logo" alt="salut"/>
+
+		<nav class="navlink">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">What if ?</a></li>
+				<li><a href="#">Sign in</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<p>Salut la compagnie !</p>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+</html>
