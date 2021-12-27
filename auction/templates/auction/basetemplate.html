@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-		<img class="logo" src="{% static "auction/very_smoll_logo.png" %}" class="logo" alt="salut"/>
+		<img class="logo" src="{% static "auction/very_smoll_logo.png" %}" alt="salut"/>
 
 		<nav class="navlink">
 			<ul>
@@ -23,9 +23,13 @@
 	</header>
 	<div class="content">
 		<p>Salut la compagnie !</p>
+		{% block content %}
+		
+		{% endblock %}
 	</div>
 	<footer>
-
+		<p>This site uses cookies to offer it's services. By using the site you agree to the use of cookies. </p>
+		<p>© 2021 - All rights reserved</p>
 	</footer>
 </body>
 </html>
