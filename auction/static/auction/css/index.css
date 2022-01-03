@@ -1,0 +1,61 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  font-family: "Montserrat Medium", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+header .navlink li {
+  display: inline-block;
+}
+header .navlink li:hover {
+  background-color: crimson;
+}
+header .navlink li a {
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  padding: 14px 16px;
+  text-align: center;
+}
+header .navlink li a:hover {
+  color: white;
+}
+header .logo {
+  padding: 10px 10px;
+  max-width: 10%;
+}
+
+.content {
+  background-color: grey;
+  flex: 1 0 auto;
+}
+
+footer {
+  background-color: #333;
+  flex-shrink: 0;
+  padding: 10px 20px;
+}
+footer p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */
