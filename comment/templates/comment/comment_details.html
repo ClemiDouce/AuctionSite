@@ -1,8 +1,16 @@
 {% extends "auction/basetemplate.html" %}
-
+{% load static %}
 
 
 {% block content %}
 	<h2>Questions and comments</h2>
 	<p>Bienvenue sur la page d'écriture de commentaires</p>
+	<a class="" href="{% url 'new-comment' %}" >Page nouveau commentaire</a>
+	{% for comment in comments %}
+	<div>
+		<p>{{comment.auction}}</p>
+		<p>{{comment.content}}</p>
+		<p>{{comment.author}}</p>
+	</div>
+	{% endfor %}
 {% endblock %}
