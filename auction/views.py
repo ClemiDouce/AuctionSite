@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, "auction/basetemplate.html")
+    return render(request, "auction/auction_detail.html")
