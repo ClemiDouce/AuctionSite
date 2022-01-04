@@ -1,13 +1,17 @@
 {% extends "auction/basetemplate.html" %}
 {% load static %}
 
+{% block head %}
+	<link rel="stylesheet" type="text/css" href={% static 'comment/css/style.css' %}>
+{%endblock%}
 
 {% block content %}
+<section class="auction_comments">
 	<h2>Questions and comments</h2>
 	<p>Bienvenue sur la page d'écriture de commentaires</p>
 	<a class="" href="{% url 'comment:new-comment' %}" >Page nouveau commentaire</a>
 	{% for comment in comments %}
-	<div>
+	<div class="comment">
 		<p>{{comment.auction}}</p>
 		<p>{{comment.author}}</p>
 		<p>{{comment.content}}</p>
@@ -15,4 +19,5 @@
 		<img src="media/{{comment.author.profile_picture}}"/>
 	</div>
 	{% endfor %}
+</section>
 {% endblock %}

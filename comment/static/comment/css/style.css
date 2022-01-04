@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+section.auction_comments {
+    display: flex;
+	justify-content: space-between;
+	border: solid;
+	border-radius: 20px;
+	flex-direction: column;
+}
+
+section.auction_comments img {
+	border: solid;
+	max-height: 50px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+
+section.auction_comments div.comment {
+	display: flex;
+	justify-content: space-between;
+	border: solid;
+	border-radius: 20px;
+}
