@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 from account.models import CustomUser
 from auction.models import Auction
 
@@ -17,3 +17,7 @@ class Comment(models.Model):
     def __str__(self):
         """"""
         return f"{self.author.username} - {self.content[:25]}"
+    
+    
+    def get_absolute_url(self):
+        return reverse('comment:comment')

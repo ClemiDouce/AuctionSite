@@ -10,8 +10,8 @@
             <table class="">
                 {{form.as_table}}
             </table>
-            <input class="" type="submit" value="Validez votre commentaire">
-            <a class="" href="{% url 'comment' %}" >Retour page précédente</a>
+            <input class="" type="submit" value="Validez votre commentaire">            
         </form>
+        <a class="" href="{% url 'comment:comment' %}" >Retour page précédente</a>
     </div>
 {% endblock %}
