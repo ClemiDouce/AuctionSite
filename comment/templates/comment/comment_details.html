@@ -9,8 +9,10 @@
 	{% for comment in comments %}
 	<div>
 		<p>{{comment.auction}}</p>
-		<p>{{comment.content}}</p>
 		<p>{{comment.author}}</p>
+		<p>{{comment.content}}</p>
+		
+		<img src="{{comment.author.profile_picture}}"/>
 	</div>
 	{% endfor %}
 {% endblock %}
