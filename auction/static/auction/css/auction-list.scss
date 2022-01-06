@@ -1,0 +1,26 @@
+.content {
+  padding: 20px 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.auction-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+
+
+  .auction-item {
+    height: 300px;
+    width: auto;
+    border: crimson 1px solid;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

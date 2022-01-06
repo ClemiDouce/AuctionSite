@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from .models import Auction
+
 # Create your views here.
 def index(request):
-    return render(request, "auction/auction_detail.html")
+    auction_list = Auction.objects.all()
+    return render(request, "auction/auction_list.html", {"auction_list": auction_list})

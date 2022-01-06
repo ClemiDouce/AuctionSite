@@ -1,0 +1,22 @@
+{% extends "auction/basetemplate.html" %}
+{% load static %}
+
+{% block header %}
+	<link rel="stylesheet" type="text/css" href="{% static "auction/css/auction-list.css" %}">
+{% endblock %}
+
+{% block content %}
+	<h2>Auction's List</h2>
+	<div class="auction-list">
+	{% for auction in auction_list %}
+		<div class="auction-item">
+			<img src="/media/auction/fleurfrancois.png"/>
+			<img src="/media/auction/fleurfrancois.png" alt="Salut les nullos">
+			<div class="description">
+				<p>{{ auction.title }}</p>
+				<p>{{ auction.base_price }} €</p>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}
