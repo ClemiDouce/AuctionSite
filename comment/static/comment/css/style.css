@@ -3,23 +3,65 @@
 section.auction_comments {
     display: flex;
 	justify-content: space-between;
-	border: solid;
-	border-radius: 20px;
 	flex-direction: column;
+	
 }
 
-section.auction_comments img {
+section.auction_comments div.do_comments {
+	display: grid;
+	height: 50px;
+	justify-content: center;
+	margin: 10px;
+		
+}
+
+section.auction_comments div.do_comments h2 {
+	
+	justify-content: center;
+	margin-right: 244px;
+		
+}
+
+section.auction_comments div.comment {
+	display: grid;
+	height: 300px;
+	justify-content: center;
+	
+}
+
+
+section.auction_comments div.comment div.comment_details {
+	display: flex;
+	height: 90px;
+	justify-content: space-between;
+	width: 500px;
 	border: solid;
+}
+
+
+section.auction_comments div.comment div.comment_details h3 {
+	width: 450px;
+}
+
+
+section.auction_comments div.comment div.comment_text {
+	display: block;
+	height: 150px;
+	justify-content: space-between;
+	border: solid;
+	inline-size: 500px;
+}
+
+
+section.auction_comments div.comment div.comment_text p{
+	margin: 10px;
+}
+
+
+section.auction_comments img {
 	max-height: 50px;
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
-	border-radius: 10px;
 }
 
-section.auction_comments div.comment {
-	display: flex;
-	justify-content: space-between;
-	border: solid;
-	border-radius: 20px;
-}
