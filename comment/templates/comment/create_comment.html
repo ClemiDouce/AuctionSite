@@ -9,11 +9,9 @@
 <section class="create_comment">
     <h2> {{user.username.upper}} vous souhaitez créer un commentaire</h2>
     <div class="form_comment">
-        <form method="POST" action="">
+        <form method="POST">
             {% csrf_token %}
-            <table class="">
-                {{form.as_table}}
-            </table>
+	            {{form.content}}
             <input class="validation" type="submit" value="Validez votre commentaire">            
         </form>
 {#        <a class="" href="{% url 'comment:comment' %}" >Retour page précédente</a>#}

@@ -5,7 +5,7 @@
 <section class="auction_comments">
 	<div class="do_comments">
 		<h2>Questions and comments for auction {{ auction.title }}</h2>
-		<a class="" href="{% url 'comment:new-comment' %}">Ecrire un nouveau commentaire</a>
+		<a class="" href="{% url 'comment:new-comment' auction_id=auction.id %}">Ecrire un nouveau commentaire</a>
 	</div>
 	{% for comment in comments %}
 		<div class="comment">
