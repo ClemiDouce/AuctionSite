@@ -65,3 +65,32 @@ section.auction_comments img {
 	justify-content: space-between;
 }
 
+section.create_comment {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+section.create_comment h2 {
+	display: grid;
+	height: 50px;
+	justify-content: center;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+section.create_comment div.form_comment {
+	display: grid;
+	height: 50px;
+	justify-content: center;
+	margin: 10px;
+}
+
+section.create_comment div.form_comment input.validation {
+	margin-left: 68px;
+}
+
+section.create_comment div.form_comment a {
+	margin-left: 68px;
+	margin-top: 10px;
+}

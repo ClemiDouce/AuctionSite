@@ -1,17 +1,23 @@
 {% extends "auction/basetemplate.html" %}
 {% load static %}
 
+{% block head %}
+	<link rel="stylesheet" type="text/css" href={% static 'comment/css/style.css' %}>
+{%endblock%}
 
 {% block content %}
-	<div>
-        <h2> {{user.username.upper}} vous souhaitez créer un commentaire</h2>
+<section class="create_comment">
+    <h2> {{user.username.upper}} vous souhaitez créer un commentaire</h2>
+    <div class="form_comment">
         <form method="POST">
             {% csrf_token %}
             <table class="">
                 {{form.as_table}}
             </table>
-            <input class="" type="submit" value="Validez votre commentaire">            
+            <input class="validation" type="submit" value="Validez votre commentaire">            
         </form>
         <a class="" href="{% url 'comment:comment' %}" >Retour page précédente</a>
     </div>
+</section>
+	
 {% endblock %}
