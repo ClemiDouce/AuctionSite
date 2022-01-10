@@ -10,7 +10,7 @@
 	<div class="auction-list">
 	{% for auction in auction_list %}
 		<div class="auction-item">
-			<img src="{{ auction.image.url }}"/>
+			<a href="{% url "auction:auction_detail" auction_id=auction.id %}"><img src="{{ auction.image.url }}"/></a>
 			<div class="description">
 				<p>{{ auction.title }}</p>
 				<p>{{ auction.base_price }} €</p>

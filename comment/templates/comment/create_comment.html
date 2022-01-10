@@ -11,12 +11,10 @@
     <div class="form_comment">
         <form method="POST">
             {% csrf_token %}
-            <table class="">
-                {{form.as_table}}
-            </table>
+	            {{form.content}}
             <input class="validation" type="submit" value="Validez votre commentaire">            
         </form>
-        <a class="" href="{% url 'comment:comment' %}" >Retour page précédente</a>
+{#        <a class="" href="{% url 'comment:comment' %}" >Retour page précédente</a>#}
     </div>
 </section>
 	
