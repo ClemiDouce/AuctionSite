@@ -9,11 +9,12 @@ class Comment(models.Model):
     content = models.TextField(max_length=255, blank=False, null=False)
     author = models.ForeignKey(to=CustomUser, on_delete=models.CASCADE)
     auction = models.ForeignKey(to=Auction, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
-        ordering =['-id']
+        ordering =['-date_created']
     
     def __str__(self):
         """"""
