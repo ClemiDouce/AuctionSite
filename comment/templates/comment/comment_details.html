@@ -1,7 +1,10 @@
 {% load static %}
 
 
-
+<div class="do_comments">
+	<h2>Questions and comments for auction {{ auction.title }}</h2>
+	<a class="" href="{% url 'comment:new-comment' auction_id=auction.id %}">Ecrire un nouveau commentaire</a>
+</div>
 {% for comment in comments %}
 <div class="box">
 	<article class="media">
