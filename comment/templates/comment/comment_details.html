@@ -1,24 +1,45 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href={% static 'comment/css/style.css' %}>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
-<section class="auction_comments">
-	<div class="do_comments">
-		<h2>Questions and comments for auction {{ auction.title }}</h2>
-		<a class="" href="{% url 'comment:new-comment' auction_id=auction.id %}">Ecrire un nouveau commentaire</a>
-	</div>
-	{% for comment in comments %}
-		<div class="comment">
-			<div class="comment_details">
-				<img src="media/{{ comment.author.profile_picture }}"/>
-				<h3>{{ comment.author }}</h3>
-			</div>
-			<div class="comment_text">
-				<p>{{ comment.content }}</p>
-			</div>
-			<div>
-				<span>-----------------------------------------------------------------------------------------------</span>
-			</div>
+{% for comment in comments %}
+<div class="box">
+	<article class="media">
+	  <div class="media-left">
+		 
+		<figure class="image is-64x64">
+		  <img src="media/{{ comment.author.profile_picture }}" alt="Image">
+		</figure>
+	  </div>
+	  <div class="media-content">
+		<div class="content">
+		  <p>
+			<strong>{{ comment.author }}</strong> <small>@{{ auction.author }}</small> <small>{{ comment.date_created }}</small>
+			<br>
+			{{ comment.content }}
+		  </p>
 		</div>
-	{% endfor %}
-</section>
+		<nav class="level is-mobile">
+		  <div class="level-left">
+			<a class="level-item" aria-label="reply">
+			  <span class="icon is-small">
+				<i class="fas fa-reply" aria-hidden="true"></i>
+			  </span>
+			</a>
+			<a class="level-item" aria-label="retweet">
+			  <span class="icon is-small">
+				<i class="fas fa-retweet" aria-hidden="true"></i>
+			  </span>
+			</a>
+			<a class="level-item" aria-label="like">
+			  <span class="icon is-small">
+				<i class="fas fa-heart" aria-hidden="true"></i>
+			  </span>
+			</a>
+		  </div>
+		</nav>
+	  </div>
+	  
+	</article>
+  </div>
+  {% endfor %}
