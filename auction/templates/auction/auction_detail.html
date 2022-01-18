@@ -2,9 +2,27 @@
 {% load static %}
 
 {% block content %}
-	<h1>{{ auction.title }}</h1>
-	<img src="{{ auction.image }}" alt="">
-	<p>{{ auction.description }}</p>
+	<div class="columns">
+		<div class="column is-6 is-offset-2">
+			<h1>{{ auction.title }}</h1>
+			<img clas="is-1by1" src="{{ auction.image.url }}" alt="">
+			<div class="box">
+				<p>{{ auction.description }}</p>
+			</div>
+			{% include "comment/comment_details.html" %}
+		</div>
+		<div class="column is-2">
+			<div class="box">
+				<h1>Tableau d'action</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur inventore
+					officia, repellendus totam veritatis voluptatibus.
+					Accusamus, aspernatur, deserunt earum eligendi esse excepturi explicabo illum odio, quisquam soluta
+					tenetur voluptatibus?
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="comments">
 
-	{% include "comment/comment_details.html" %}
+	</div>
 {% endblock %}
